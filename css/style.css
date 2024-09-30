@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #dbe8db;
+}
+.container { /* Ehkä parempi ilman. Lyhyempi bänneri??*/
+    max-width: 80%; /* Sisällön leveys */
+    margin: 0 auto; /* Keskitetään sisältö */
+   /* padding: 20px; /* Täyte, en tiiä onko tarpeellinen...pienemmmille näytöille ehkä */
+    background-color: #f3f3f3;
+}
+
+/* Navbar starts */
+header {
+    background-color: #272724;
+    padding: 10px; /* Sisäreunojen täyttö */
+    color: white;
+}
+nav ul {
+    list-style-type: none; /* Luettelomerkit pois*/
+    padding: 0; /* Poistetaan oletustäyttö sisältä */
+    margin: 0; /*Poistetaan oletusmarginaali */
+    display: flex; /* Luettelo vaakasuuntaan */
+    justify-content: center; /* Tasaa sisällön oikealle */
+}
+nav ul li {
+    margin-right: 20px; /* Luettelokohtien oik. puolelle väli */
+    /*padding: 8px 10px;*/ /* Enemmän tilaa naviin */
+}
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Poistetaan alleviivaus linkeiltä */
+    font-weight: bold;
+}
+/* Navbar ends */
+
+/* Banner starts */
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Tai määritä kiinteä leveys */
+}
+.image-container img {
+    display: block; /* Poistaa kuvan ympärille jäävän alareunan */
+    width: 100%; /* Koko kontin leveyden */
+    height: auto; /* Säilytetään kuvan mittasuhteet */
+ /*   filter: brightness(70%); /* Säätää kirkkauden 50%:iin alkuperäisestä */
+}
+.image-container .logo-image {
+    position: absolute;
+    top: 30px; /* Sijoittaa 30 pikselin päähän yläreunasta */
+    left: 30px; /* Sijoittaa 30 pikselin päähän vasemmasta reunasta */
+    width: 200px; /* Säädä kuvan koko tarpeidesi mukaan */
+    height: auto;
+}
+.overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50%; /* Tekstin leveys on puolet kuvan leveydestä */
+     /*   transform: translate(-50%, -50%);*/
+    color: white;
+    /*    background-color: black; /* Helpompi hahmottaa elementti */
+    /* padding-left: 30px; */
+    box-sizing: border-box; /* Sisällyttää paddingin ja borderin elementin kokonaisleveyteen */
+    text-align: center;
+}
+.image-container .form-button {
+    display: inline-block;
+    margin-top: 15%; /* Väli tekstin ja painikkeen välillä */
+    padding: 10px 70px;
+    background-color: #72b243;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.image-container .form-button:hover {
+    background-color: #90c16b; /* Hover-efekti */
+}
+/* Banner ends */
+
+h2, h3 {
+    color: #fff
+}
+
+/* How Kotilo works start */
+.how_kotilo_works {
+    /* position: absolute; */
+    display: inline-block;
+    width: 100%; /* Koko kontin leveyden */
+    padding: 100px;
+}
+.how_kotilo_works img {
+    display: block; /* Poistaa kuvan ympärille jäävän alareunan */
+    width: 100%; /* Koko kontin leveyden */
+    height: auto; /* Säilytetään kuvan mittasuhteet */
+}
+/* How Kotilo works end */
+
+/* Waste sorting starts */
+.waste_sorting {
+    /* position: absolute; */
+    display: inline-block;
+    width: 100%; /* Koko kontin leveyden */
+    padding: 100px;
+}
+.waste_sorting img {
+    display: block; /* Poistaa kuvan ympärille jäävän alareunan */
+    width: 100%; /* Koko kontin leveyden */
+    height: auto; /* Säilytetään kuvan mittasuhteet */
+}
+/* Waste sorting ends */
+
+/* Waste types starts */
+.waste_types {
+    /* position: absolute; */
+    display: inline-block;
+    width: 100%; /* Tai määritä kiinteä leveys */
+    padding: 100px;
+}
+.waste_types img {
+    display: block; /* Poistaa kuvan ympärille jäävän alareunan */
+    width: 100%; /* Koko kontin leveyden */
+    height: auto; /* Säilytetään kuvan mittasuhteet */
+}
+/* Waste types ends */
+
+/* Hankkeen tavoitteet starts */
+.hankkeen_tavoitteet {
+    background-color: #272724;
+    margin-top: 50px;
+    margin-bottom: 50px; /* Poista tää jos mietit väliä...*/
+    /* margin-left: 150px;
+    margin-right: 150px; */
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    font-size: 25px;
+}
+.hankkeen_tavoitteet h2{
+    text-align: center;
+}
+/* Hankkeen tavoitteet ends */
+
+/* Contact us starts */
+.contact_us {
+    /* position: absolute; */
+    display: inline-block;
+    width: 100%; /* Tai määritä kiinteä leveys */
+    padding: 100px;
+}
+.contact_us img {
+    display: block; /* Poistaa kuvan ympärille jäävän alareunan */
+    width: 100%; /* Koko kontin leveyden */
+    height: auto; /* Säilytetään kuvan mittasuhteet */
+}
+/* Contact us ends */
+
+/* FOR EMPTY PAGES: form.html, about.html */
+.emptyspace {
+    height: 400px;
+    text-align: center;
+    padding-top: 50px;
+}
+
