@@ -170,3 +170,104 @@ h2, h3 {
     padding-top: 50px;
 }
 
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    align-items: flex-start; /* Align top sections */
+}
+
+.left-footer, .middle-footer, .right-footer {
+    width: 30%; /* Make each section take 30% width */
+}
+
+.left-footer p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.middle-footer {
+    text-align: center; /* Center the navigation links */
+}
+
+.middle-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.middle-footer ul li {
+    margin: 5px 0;
+}
+
+.middle-footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.middle-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Right footer for social media and subscribe section */
+.right-footer {
+    text-align: left;
+}
+
+.right-footer p {
+    margin-bottom: 10px; /* Add space between the text and social icons */
+}
+
+/* Social media icons */
+.social-icons {
+    display: flex; /* Display icons horizontally */
+    gap: 10px; /* Add space between the icons */
+    margin-bottom: 10px; /* Add space between icons and "Subscribe" text */
+}
+
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #72b243; /* Change color on hover */
+}
+
+/* Subscribe form */
+.subscribe-form {
+    margin-top: 15px;
+    display: flex;
+    align-items: center; /* Align input and button vertically */
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    width: 70%; /* Set the width of the email input */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between input and button */
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: #72b243;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover {
+    background-color: #90c16b;
+}
