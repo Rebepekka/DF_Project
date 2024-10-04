@@ -171,7 +171,7 @@ h2, h3 {
 }
 
 footer {
-    background-color: black;
+    background-color: #272724;
     color: white;
     padding: 30px 0;
     font-family: 'Arial', sans-serif;
@@ -180,13 +180,16 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     align-items: flex-start; /* Align top sections */
 }
 
-.left-footer, .middle-footer, .right-footer {
-    width: 30%; /* Make each section take 30% width */
+.left-footer {
+    width: 50%;
+} 
+.middle-footer, .right-footer {
+    width: 20%; /* Make each section take 30% width */
 }
 
 .left-footer p {
@@ -195,7 +198,7 @@ footer {
 }
 
 .middle-footer {
-    text-align: center; /* Center the navigation links */
+    text-align: left; /* Center the navigation links */
 }
 
 .middle-footer ul {
