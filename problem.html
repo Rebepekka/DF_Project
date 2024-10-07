@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotilo - Problem Page</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dbe8db;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: #f3f3f3;
+        }
+
+        /* Navbar styling */
+        header {
+            background-color: #272724;
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Image Section */
+        .image-section {
+            background-image: url('file:///D:/Kotilo/Kotilo/images/trashcan.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 450px; /* Increased height */
+            opacity: 0.8; /* Make the image semi-transparent */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Paragraphs after the image */
+        .problem-intro {
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Problem Box styling */
+        .problem-box-container {
+            display: flex;
+            justify-content: space-around; /* Even spacing */
+            flex-wrap: wrap; /* Allow wrapping */
+            margin: 20px 0; /* Margin above and below */
+        }
+
+        .problem-box {
+            width: 25%; /* Adjusted width for boxes */
+            height: 300px; /* Increased height */
+            color: white;
+            padding: 20px; /* Reduced padding */
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+            border-radius: 5px; /* Slight rounding for aesthetics */
+            margin-bottom: 20px; /* Space below each box */
+        }
+
+        /* Box Colors */
+        .problem-box-1 {
+            background-color: #5c9e3f; /* Hex for first box */
+        }
+
+        .problem-box-2 {
+            background-color: black; /* Black for second box */
+        }
+
+        .problem-box-2 p {
+            color: white; /* White text for second box */
+        }
+
+        .problem-box-3 {
+            background-color: #112452; /* Hex for third box */
+        }
+
+        .problem-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .problem-box button {
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            color: inherit; /* Inherit color based on box */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 40px; /* Increased margin to move button down */
+        }
+
+        .problem-box button:hover {
+            background-color: #90c16b; /* Hover effect for all buttons */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 30px 0;
+            font-family: 'Arial', sans-serif;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-footer,
+        .middle-footer,
+        .right-footer {
+            width: 30%;
+        }
+
+        .left-footer p,
+        .middle-footer ul li,
+        .right-footer p {
+            font-size: 14px;
+        }
+
+        .middle-footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .middle-footer ul li {
+            margin: 5px 0;
+        }
+
+        .middle-footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .middle-footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #72b243;
+        }
+
+        .subscribe-form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .subscribe-form input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .subscribe-form button {
+            padding: 10px 20px;
+            background-color: #72b243;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscribe-form button:hover {
+            background-color: #90c16b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Transparent Image Section -->
+        <section class="image-section">
+            <!-- Optionally add text over the image -->
+        </section>
+
+        <!-- Paragraphs before the green boxes -->
+        <section class="problem-intro">
+            <p>Welcome to the Kotilo problem-solving section. Here you will find a set of problems aimed at improving waste management and promoting better environmental practices. Each problem is designed to challenge your creativity and help you think of innovative solutions.</p>
+
+            <p>By participating, you are not only helping the environment but also contributing to a larger movement toward sustainable living. Explore the problems below and take the first step towards making a difference.</p>
+        </section>
+
+        <!-- Problem Boxes Section -->
+        <section class="problem-box-container">
+            <div class="problem-box problem-box-1">
+                <h3>Problem 1</h3>
+                <p>Despite the importance of waste sorting, many consumers remain unaware of the proper methods for separating their trash. This lack of knowledge leads to contamination in recycling bins, rendering valuable materials unusable. </p>
+                <button>View Details</button>
+            </div>
+            <div class="problem-box problem-box-2">
+                <h3>Problem 2</h3>
+                <p>Plastic pollution is a pressing issue affecting our ecosystems and health. Millions of tons of plastic end up in landfills and oceans each year, causing harm to wildlife and contributing to environmental degradation. </p>
+                <button>View Details</button>
+            </div>
+            <div class="problem-box problem-box-3">
+                <h3>Problem 3</h3>
+                <p>Organic waste constitutes a significant portion of the trash that ends up in landfills, contributing to greenhouse gas emissions. Encourage local communities to adopt composting practices to divert organic waste from landfills</p>
+                <button>View Details</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Left Footer: KOTILO description -->
+            <div class="left-footer">
+                <p>KOTILO<br>Kuluttajien osallistaminen jätteiden syntypaikkalajittelun edistämiseen</p>
+            </div>
+
+            <!-- Middle Footer: Navigation Links -->
+            <div class="middle-footer">
+                <p>KOTILO</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Footer: Social Media and Subscribe -->
+            <div class="right-footer">
+                <p>Social Media</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <p>Subscribe</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" />
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
