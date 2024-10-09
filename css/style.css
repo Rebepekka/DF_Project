@@ -17,23 +17,27 @@ body {
 /* Navbar starts */
 header {
     background-color: #272724;
-    padding: 10px; /* Sisäreunojen täyttö */
-    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
 }
 nav ul {
-    list-style-type: none; /* Luettelomerkit pois*/
-    padding: 0; /* Poistetaan oletustäyttö sisältä */
-    margin: 0; /*Poistetaan oletusmarginaali */
-    display: flex; /* Luettelo vaakasuuntaan */
-    justify-content: center; /* Tasaa sisällön oikealle */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
+
 nav ul li {
-    margin-right: 20px; /* Luettelokohtien oik. puolelle väli */
-    /*padding: 8px 10px;*/ /* Enemmän tilaa naviin */
+    margin-right: 20px;
 }
+
 nav ul li a {
     color: white;
-    text-decoration: none; /* Poistetaan alleviivaus linkeiltä */
+    text-decoration: none;
     font-weight: bold;
 }
 /* Navbar ends */
