@@ -20,10 +20,12 @@
         }
 
         .container {
-            max-width: 80%;
-            margin: 0 auto;
-            background-color: #f3f3f3;
-        }
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    flex: 1; /* Allows the container to take up all available space until the footer */
+    padding-bottom: 20px; /* Padding to ensure content doesn't touch the footer */
+}
 
         /* Navbar styling */
         header {
@@ -214,6 +216,93 @@
         .subscribe-form button:hover {
             background-color: #90c16b;
         }
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    overflow-y: auto; /* Ensure scrolling for overflow content */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Reduced margin from the top to bring the modal up */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    max-height: fit-content;
+    border-radius: 10px;
+    overflow-y: auto; /* Allow internal scrolling if content exceeds height */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style the form elements */
+form p {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Added space between questions */
+}
+
+form label {
+    margin-right: 15px;
+    margin-bottom: 15px; /* Added margin at the bottom of radio inputs */
+    display: block; /* Display label as a block to stack radio buttons vertically */
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+/* Added file input for picture upload */
+input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 20px; /* Added space below the file upload field */
+}
+
+/* Submit button to the right */
+button[type="submit"] {
+    margin-top: 20px;
+    background-color: #72b243;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right; /* Moved the button to the right */
+}
+
+button[type="submit"]:hover {
+    background-color: #90c16b;
+}
+
+
+
+
     </style>
 </head>
 
@@ -293,11 +382,228 @@
                 <p>Subscribe</p>
                 <div class="subscribe-form">
                     <input type="email" placeholder="Enter your email" />
-                    <button type="submit">Send</button>
+                    <button type="submit" style="margin: 0px;">Send</button>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modal Structure -->
+    <div id="problem1Modal" class="modal">
+        <div class="modal-content" >
+            <span class="close">&times;</span>
+            <h2>Problem 1: Waste Sorting Survey</h2>
+            <form id="problem1Form">
+                <p>Are waste bins named clearly?</p>
+                <label><input type="radio" name="binsNamed" value="yes"> Yes</label>
+                <label><input type="radio" name="binsNamed" value="no"> No</label>
+    
+                <p>Is there rubbish outside of the bins?</p>
+                <label><input type="radio" name="rubbishOutside" value="yes"> Yes</label>
+                <label><input type="radio" name="rubbishOutside" value="no"> No</label>
+    
+                <p>Are the waste bins overfilled?</p>
+                <label><input type="radio" name="overfilled" value="yes"> Yes</label>
+                <label><input type="radio" name="overfilled" value="no"> No</label>
+    
+                <p>Other, what?</p>
+                <textarea name="otherDescription" rows="4" cols="50" placeholder="Describe here"></textarea>
+    
+                <!-- New file input for image upload -->
+                <p>Send picture (optional):</p>
+                <input type="file" name="uploadImage" accept="image/*">
+    
+                <!-- Submit button aligned to the right -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Modal Structure for Problem 2 -->
+<div id="problem2Modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Problem 2: Waste Shed Inspection</h2>
+        <form id="problem2Form">
+            <p>Is the waste shed damaged?</p>
+            <label><input type="radio" name="shedDamaged" value="yes"> Yes</label>
+            <label><input type="radio" name="shedDamaged" value="no"> No</label>
+            
+            <div id="damagedDetails" style="display:none;">
+                <p>If yes, how is the shed damaged?</p>
+                <textarea name="damagedDescription" rows="4" cols="50" placeholder="Describe the damage here"></textarea>
+            </div>
+
+            <p>Is ventilation working?</p>
+            <label><input type="radio" name="ventilationWorking" value="yes"> Yes</label>
+            <label><input type="radio" name="ventilationWorking" value="no"> No</label>
+
+            <p>Is there an unpleasant smell?</p>
+            <label><input type="radio" name="unpleasantSmell" value="yes"> Yes</label>
+            <label><input type="radio" name="unpleasantSmell" value="no"> No</label>
+
+            <p>Can animals get into the shed?</p>
+            <label><input type="radio" name="animalsCanGetIn" value="yes"> Yes</label>
+            <label><input type="radio" name="animalsCanGetIn" value="no"> No</label>
+
+            <div id="animalDetails" style="display:none;">
+                <p>If yes, please describe where the animals can get in:</p>
+                <textarea name="animalDescription" rows="4" cols="50" placeholder="Describe here"></textarea>
+            </div>
+
+            <p>Does the shed have a working door?</p>
+            <label><input type="radio" name="doorWorking" value="yes"> Yes</label>
+            <label><input type="radio" name="doorWorking" value="no"> No</label>
+
+            <p>Are there items that do not belong in the shed?</p>
+            <label><input type="radio" name="itemsNotBelonging" value="yes"> Yes</label>
+            <label><input type="radio" name="itemsNotBelonging" value="no"> No</label>
+
+            <div id="notBelongingDetails" style="display:none;">
+                <p>If yes, what?</p>
+                <textarea name="notBelongingDescription" rows="4" cols="50" placeholder="Describe items here"></textarea>
+            </div>
+
+            <p>Other, what?</p>
+            <textarea name="otherDescription" rows="4" cols="50" placeholder="Describe here"></textarea>
+
+            <button type="submit" style="margin-top: 10px;">Submit</button>
+
+        </form>
+    </div>
+</div>
+
+<!-- Modal Structure for Problem 3 -->
+<div id="problem3Modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Problem 3: Accessibility Issues</h2>
+        <form id="problem3Form">
+            <p>Is your issue some of these:</p>
+            
+            <label><input type="checkbox" name="issue" value="slipperyGround"> The ground is slippery</label>
+            <br>
+            <label><input type="checkbox" name="issue" value="hardToOpenCovers"> The waste bin covers are hard to open</label>
+            <br>
+            <label><input type="checkbox" name="issue" value="noWheelchairAccess"> There is a doorsill that limits wheelchair access</label>
+            <br>
+            <label><input type="checkbox" name="issue" value="noLighting"> There is no lighting in the waste area</label>
+            
+            <p>Other, what?:</p>
+            <textarea name="otherIssue" rows="4" cols="50" placeholder="Describe here"></textarea>
+
+            <button type="submit" style="margin-top: 10px;">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+    
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("problem1Modal");
+    
+    // Get the button that opens the modal
+    var btn = document.querySelector(".problem-box-1 button");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Get the modal for Problem 2
+var modal2 = document.getElementById("problem2Modal");
+
+// Get the button that opens the modal for Problem 2
+var btn2 = document.querySelector(".problem-box-2 button");
+
+// Get the close button for Problem 2
+var span2 = modal2.getElementsByClassName("close")[0];
+
+// Function to show/hide fields based on radio button selection
+function toggleVisibility(radioName, fieldId) {
+    var radios = document.getElementsByName(radioName);
+    var field = document.getElementById(fieldId);
+    radios.forEach(function(radio) {
+        radio.onchange = function() {
+            if (this.value === 'yes') {
+                field.style.display = 'block';
+            } else {
+                field.style.display = 'none';
+            }
+        };
+    });
+}
+
+// When the user clicks the button, open the modal for Problem 2
+btn2.onclick = function () {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal for Problem 2
+span2.onclick = function () {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal for Problem 2, close it
+window.onclick = function (event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+// Call the toggleVisibility function for each question that needs additional fields
+toggleVisibility('shedDamaged', 'damagedDetails');
+toggleVisibility('animalsCanGetIn', 'animalDetails');
+toggleVisibility('itemsNotBelonging', 'notBelongingDetails');
+
+    </script>
+    
+    <script>
+        // Get the modal for Problem 3
+        var modal3 = document.getElementById("problem3Modal");
+    
+        // Get the button that opens the modal for Problem 3
+        var btn3 = document.querySelector(".problem-box-3 button");
+    
+        // Get the close button for Problem 3
+        var span3 = modal3.getElementsByClassName("close")[0];
+    
+        // When the user clicks the button, open the modal for Problem 3
+        btn3.onclick = function () {
+            modal3.style.display = "block";
+        }
+    
+        // When the user clicks on <span> (x), close the modal for Problem 3
+        span3.onclick = function () {
+            modal3.style.display = "none";
+        }
+    
+        // When the user clicks anywhere outside of the modal for Problem 3, close it
+        window.onclick = function (event) {
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+        }
+    </script>
+    
 
 </body>
 
