@@ -68,9 +68,6 @@ nav ul li a {
     width: 50%; /* Tekstin leveys on puolet kuvan leveydestä */
      /*   transform: translate(-50%, -50%);*/
     color: white;
-    /*    background-color: black; /* Helpompi hahmottaa elementti */
-    /* padding-left: 30px; */
-    box-sizing: border-box; /* Sisällyttää paddingin ja borderin elementin kokonaisleveyteen */
     text-align: center;
 }
 .image-container .form-button {
