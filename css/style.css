@@ -180,17 +180,13 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
     align-items: flex-start; /* Align top sections */
 }
 
-.left-footer {
-    width: 50%;
-}
-
-.middle-footer, .right-footer {
-    width: 20%; /* Make each section take 30% width */
+.left-footer, .middle-footer, .right-footer {
+    width: 30%; /* Make each section take 30% width */
 }
 
 .left-footer p {
@@ -199,7 +195,7 @@ footer {
 }
 
 .middle-footer {
-    text-align: left; /* Center the navigation links */
+    text-align: center; /* Center the navigation links */
 }
 
 .middle-footer ul {
