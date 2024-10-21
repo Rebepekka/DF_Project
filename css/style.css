@@ -181,16 +181,54 @@ h2, h3 {
 /* Hankkeen tavoitteet ends */
 
 /* Contact us starts */
-.contact_us {
-    /* position: absolute; */
-    display: inline-block;
-    width: 100%; /* Tai määritä kiinteä leveys */
-    padding: 100px;
+#contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    margin-bottom: 20px;
 }
-.contact_us img {
-    display: block; /* Poistaa kuvan ympärille jäävän alareunan */
-    width: 100%; /* Koko kontin leveyden */
-    height: auto; /* Säilytetään kuvan mittasuhteet */
+#contacts p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: black;
+}
+.contact1 { 
+    display: flex;
+    width: calc(45%);
+    padding: 15px;
+    background-color:#f3f3f3;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contact2 h2 { 
+    font-size: 2em;
+    color: black;
+    margin-bottom: 30px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    width: calc(45%);
+    background-color: #f4f4f4;
+    padding: 15px;
+    background-color:rgb(223, 219, 219);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contact img {
+    width: 250px;
+    height: 250px;
+    margin-right: 15px;
+}
+
+.contact-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 /* Contact us ends */
 
