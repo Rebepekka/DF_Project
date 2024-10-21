@@ -324,11 +324,9 @@ h2, h3 {
 
 /* Footer styling */
 footer {
-    background-color: black;
+    background-color: #272724;
     color: white;
     padding: 30px 0;
-    max-width: 1215px; /* Set the desired maximum width */
-    margin: 0 auto; /* Center the footer */
     font-family: 'Arial', sans-serif;
 }
 
