@@ -337,11 +337,17 @@ footer {
 
 .left-footer {
     width: 50%;
+<<<<<<< HEAD
 }
 
 .middle-footer,
 .right-footer {
     width: 20%; /* Make each section take 20% width */
+=======
+} 
+.middle-footer, .right-footer {
+    width: 20%; /* Make each section take 30% width */
+>>>>>>> 1ba7d3ebb1469914c4c74a7603b4caf594bb3576
 }
 
 .left-footer p {
